@@ -60,7 +60,8 @@ async def on_message(message: discord.Message):
             try:
               if flag==1:
                 await rep.delete()
-              await message.reply(gprompt+"\n\n>> "+gkun, mention_author=False)
+                await message.delete()
+              await message.channel.send(gprompt+"\n\n>> "+gkun, mention_author=False)
             except:
               i=2
               gkun1=""
@@ -68,20 +69,20 @@ async def on_message(message: discord.Message):
                 gkun1=gkun1+f">> {gprompt1[i]}"
                 i=i+1
               try:
-                await message.reply(gkun1+"\n\n>> "+gkun, mention_author=False)
+                await message.channel.send(gkun1+"\n\n>> "+gkun, mention_author=False)
               except:
                 i=6
                 gkun1=""
-                while i < len(gprompt1):                  
+                while i < len(gprompt1):
                   gkun1=gkun1+f">> {gprompt1[i]}"
                   i=i+1
                 try:
-                  await message.reply(gkun1+"\n\n>> "+gkun, mention_author=False)
+                  await message.channel.send(gkun1+"\n\n>> "+gkun, mention_author=False)
                 except:
                   try:
-                    await message.reply("会話がながすぎです！")
-                  except:
-                    await message.channel.send("メッセージが消されてます！")
+                    await message.channel.send("会話がながすぎです！")
+                  except Exception as e:
+                    await message.channel.send(e)
         except Exception as e: 
             await msg.delete()
             await message.reply(f"エラー\n{e}",mention_author=False)
@@ -134,7 +135,7 @@ async def on_message(message: discord.Message):
               try:
                 if flag==1:
                   await rep.delete()
-                await message.reply(gprompt+"\n\n>> "+gkun, mention_author=False)
+                await message.channel.send(gprompt+"\n\n>> "+gkun, mention_author=False)
               except:
                 i=2
                 gkun1=""
@@ -142,7 +143,7 @@ async def on_message(message: discord.Message):
                   gkun1=gkun1+f">> {gprompt1[i]}"
                   i=i+1
                 try:
-                  await message.reply(gkun1+"\n\n>> "+gkun, mention_author=False)
+                  await message.channel.send(gkun1+"\n\n>> "+gkun, mention_author=False)
                 except:
                   i=6
                   gkun1=""
@@ -150,12 +151,12 @@ async def on_message(message: discord.Message):
                     gkun1=gkun1+f">> {gprompt1[i]}"
                     i=i+1
                   try:
-                    await message.reply(gkun1+"\n\n>> "+gkun, mention_author=False)
+                    await message.channel.send(gkun1+"\n\n>> "+gkun, mention_author=False)
                   except:
                     try:
                       await message.reply("会話がながすぎです！")
-                    except:
-                      await message.channel.send("メッセージが消されてます！")
+                    except Exception as e: 
+                      await message.channel.send(e)
           except Exception as e: 
               await msg.delete()
               await message.reply(f"エラー\n{e}",mention_author=False)
