@@ -18,5 +18,5 @@ ChatGPTの返答を自分で作って放り込む
 ![5](image/5.png)
 #### なにかあったら (なくてもOK～ なんとなく入るとか話したいとか)
 サーバー  
-https://discord.gg/eyngej5NeK  
+https://discord.gg/aSyaAK7Ktm  
 僕のDiscord -> .taka.  
