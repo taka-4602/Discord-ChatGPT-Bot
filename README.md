@@ -16,7 +16,7 @@ GPTとの会話例
 ![4](image/4.png)     
 ChatGPTの返答を自分で作って放り込む  
 ![5](image/5.png)
-#### なにかあったら (なくてもOK～ なんとなく入るとか話したいとか)
+#### コンタクト
 サーバー  
 https://discord.gg/aSyaAK7Ktm  
 僕のDiscord -> .taka.  
