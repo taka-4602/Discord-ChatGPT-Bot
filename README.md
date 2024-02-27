@@ -1,3 +1,4 @@
+# もう古くて使えないです
 # Discord-ChatGPT-Bot
 #### Discordで本格的に会話を続けられるGPT APIを使ったBotです
 セットアップは簡単、DiscordBotのトークンとChatGPTのトークンを入れるだけ！  
